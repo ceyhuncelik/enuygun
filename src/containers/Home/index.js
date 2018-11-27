@@ -1,14 +1,17 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import logo from 'logo.svg';
-import { simpleAction } from 'actions/serviceAction';
+import { fetchTvShows } from 'thunks/serviceMiddleware'
 import { serviceReducerToJS } from 'selector';
 // import { convertToJS } from './selectors/serviceSelector';
+
+import { API_SEARCH } from 'paths';
 
 class Home extends Component {
   testRedux = () => {
     // this.props.simpleAction();
-    this.props.dispatch(simpleAction());
+    this.props.dispatch(fetchTvShows('batmanTvShowList', { q: 'batman' }, API_SEARCH));
     // this.props.dispatch(denemeAction('key','value'));
   }
   render() {
@@ -29,6 +32,7 @@ class Home extends Component {
             Learn React
           </a>
           <button onClick={() => this.testRedux()}>Test Redux</button>
+          <Link to={'/about/'+'batman'}> Test Route to about page </Link>
         </header>
       </div>
     );

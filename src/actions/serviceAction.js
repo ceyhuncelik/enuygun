@@ -1,9 +1,19 @@
+import {
+  TV_SHOW_FETCHING,
+  TV_SHOW_FETCH_SUCCESS,
+  TV_SHOW_FETCH_FAILURE,
+} from 'constants/serviceConstants';
 
 export const simpleAction = () => dispatch => {
  dispatch({
   type: 'SIMPLE_ACTION',
   payload: 'result_of_simple_action'
  })
+}
+
+
+export function toggleTodo(index) {
+  return { type: 'TOGGLE_TODO', index };
 }
 
 export function denemeAction(key, value) {
@@ -14,14 +24,23 @@ export function denemeAction(key, value) {
   };
 }
 
-export function toggleTodo(index) {
-  return { type: 'TOGGLE_TODO', index };
+
+// ---
+export function tvShowsFetching() {
+  return {
+    type: TV_SHOW_FETCHING,
+  };
 }
-
-// ikinci randımanlı calısmıyor cok enteresan arkadas
-// bir klasorde bir tane olabilir diye bi sart falan mı var anlayamadım
-// burada dispatch den kurtarmamız gerek ama bilemedim neden olmadı acaba
-//
-
-
-// dispatch yaptırmamız gerek
+export function tvShowFetchSuccess(key, response) {
+  return {
+    type: TV_SHOW_FETCH_SUCCESS,
+    key,
+    response,
+  };
+}
+export function tvShowFetchFailure(error) {
+  return {
+    type: TV_SHOW_FETCH_FAILURE,
+    error,
+  };
+}
