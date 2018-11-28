@@ -1,7 +1,7 @@
 {
   "main.css": "/enuygun/static/css/main.eeec9aff.chunk.css",
-  "main.js": "/enuygun/static/js/main.fd934ea4.chunk.js",
-  "main.js.map": "/enuygun/static/js/main.fd934ea4.chunk.js.map",
+  "main.js": "/enuygun/static/js/main.da412ca2.chunk.js",
+  "main.js.map": "/enuygun/static/js/main.da412ca2.chunk.js.map",
   "static/js/1.1f22f873.chunk.js": "/enuygun/static/js/1.1f22f873.chunk.js",
   "static/js/1.1f22f873.chunk.js.map": "/enuygun/static/js/1.1f22f873.chunk.js.map",
   "runtime~main.js": "/enuygun/static/js/runtime~main.0b14ad48.js",
@@ -9,6 +9,6 @@
   "static/media/logo.svg": "/enuygun/static/media/logo.5d5d9eef.svg",
   "static/css/main.eeec9aff.chunk.css.map": "/enuygun/static/css/main.eeec9aff.chunk.css.map",
   "index.html": "/enuygun/index.html",
-  "precache-manifest.2f16b01bbed5bc2f4383dd7da8778e07.js": "/enuygun/precache-manifest.2f16b01bbed5bc2f4383dd7da8778e07.js",
+  "precache-manifest.ec25e70498ffea9ae3fbdb59da778095.js": "/enuygun/precache-manifest.ec25e70498ffea9ae3fbdb59da778095.js",
   "service-worker.js": "/enuygun/service-worker.js"
 }
