@@ -21,10 +21,10 @@ class About extends Component {
         summary: res.summary,
         url: res.url,
         genres: res.genres,
-        average: res.rating.average,
-        countryCode: res.network.country.code,
-        countryName: res.network.country.name,
-        image: res.image.original,
+        average: (res.rating) ? res.rating.average : null,
+        countryCode: (res.network) ? res.network.country.code : 'TR',
+        countryName: (res.network) ? res.network.country.name : null,
+        image: (res.image) ? res.image.original : null,
       });
     }));
   }
