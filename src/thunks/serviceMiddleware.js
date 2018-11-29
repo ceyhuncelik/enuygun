@@ -1,21 +1,3 @@
-
-
-// export function itemsFetchData(url) {
-//     return (dispatch) => {
-//         dispatch(itemsIsLoading(true));
-//         fetch(url)
-//             .then((response) => {
-//                 if (!response.ok) {
-//                     throw Error(response.statusText);
-//                 }
-//                 return response;
-//             })
-//             .then((response) => response.json())
-//             .then((items) => dispatch(itemsFetchDataSuccess(items)))
-//             .catch(() => dispatch(itemsHasErrored(true)));
-//     };
-// }
-
 import { API_SEARCH } from 'paths';
 
 import {
@@ -51,5 +33,3 @@ function setQuery(filterValues) {
   });
   return tamp;
 }
-// burada gelen bütün parameteleri path query olarak ekleten bir sey yzmak gerek
-// hadi bakalım

@@ -6,11 +6,16 @@ export default class TvShowList extends Component {
   generateList = (data) => {
     if(data) {
       const tvItems = data.map((item) => {
-        return (<TvItem {...item.show} />);
+        const pathVariable = this.urlParse(item.show.url);
+        return (<TvItem {...item.show} pathVariable={pathVariable} />);
       })
       return tvItems;
     }
     return null;
+  }
+  urlParse = (url = '') => {
+    const i = url.lastIndexOf('/');
+    return url.slice(i+1);
   }
   render() {
     console.log(this.props.serviceReducer, 'hadi bakalım hayrlısı');
@@ -36,7 +41,7 @@ export const TvItem = (props) => {
           <span className="rate">{props.rating.average || '0.0'}</span>
         </div>
         <div className="link-box">
-          <Link to={'/enuygun/about/'+props.name}>
+          <Link to={'/enuygun/about/'+props.pathVariable}>
             Detay
           </Link>
         </div>

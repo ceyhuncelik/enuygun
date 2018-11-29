@@ -23,7 +23,3 @@ class App extends Component {
 }
 
 export default App;
-
-// tasarım calısmalarına baslamak gerek artık
-// biter bitmez de yatar uyuruz diyecem olmaz daha bi wideframe hazırlamamız gerekiyor
-// way arkadas
