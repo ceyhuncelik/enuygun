@@ -1,14 +1,14 @@
 {
-  "main.css": "/enuygun/static/css/main.eeec9aff.chunk.css",
-  "main.js": "/enuygun/static/js/main.da412ca2.chunk.js",
-  "main.js.map": "/enuygun/static/js/main.da412ca2.chunk.js.map",
-  "static/js/1.1f22f873.chunk.js": "/enuygun/static/js/1.1f22f873.chunk.js",
-  "static/js/1.1f22f873.chunk.js.map": "/enuygun/static/js/1.1f22f873.chunk.js.map",
+  "main.css": "/enuygun/static/css/main.4630eb16.chunk.css",
+  "main.js": "/enuygun/static/js/main.72f85d54.chunk.js",
+  "main.js.map": "/enuygun/static/js/main.72f85d54.chunk.js.map",
+  "static/js/1.cc70dc53.chunk.js": "/enuygun/static/js/1.cc70dc53.chunk.js",
+  "static/js/1.cc70dc53.chunk.js.map": "/enuygun/static/js/1.cc70dc53.chunk.js.map",
   "runtime~main.js": "/enuygun/static/js/runtime~main.0b14ad48.js",
   "runtime~main.js.map": "/enuygun/static/js/runtime~main.0b14ad48.js.map",
-  "static/media/logo.svg": "/enuygun/static/media/logo.5d5d9eef.svg",
-  "static/css/main.eeec9aff.chunk.css.map": "/enuygun/static/css/main.eeec9aff.chunk.css.map",
+  "static/media/app.scss": "/enuygun/static/media/Batman_TV_Series.a3c71cc6.jpg",
+  "static/css/main.4630eb16.chunk.css.map": "/enuygun/static/css/main.4630eb16.chunk.css.map",
   "index.html": "/enuygun/index.html",
-  "precache-manifest.ec25e70498ffea9ae3fbdb59da778095.js": "/enuygun/precache-manifest.ec25e70498ffea9ae3fbdb59da778095.js",
+  "precache-manifest.d952c6b79a40493c70010e742e552bed.js": "/enuygun/precache-manifest.d952c6b79a40493c70010e742e552bed.js",
   "service-worker.js": "/enuygun/service-worker.js"
 }
