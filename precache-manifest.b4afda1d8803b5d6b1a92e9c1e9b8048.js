@@ -8,19 +8,19 @@ self.__precacheManifest = [
     "url": "/enuygun/static/js/runtime~main.0b14ad48.js"
   },
   {
-    "revision": "72f85d54f3f459e97e6a",
-    "url": "/enuygun/static/js/main.72f85d54.chunk.js"
+    "revision": "c447057bf533d20cc449",
+    "url": "/enuygun/static/js/main.c447057b.chunk.js"
   },
   {
     "revision": "cc70dc53254b6ec44483",
     "url": "/enuygun/static/js/1.cc70dc53.chunk.js"
   },
   {
-    "revision": "72f85d54f3f459e97e6a",
+    "revision": "c447057bf533d20cc449",
     "url": "/enuygun/static/css/main.4630eb16.chunk.css"
   },
   {
-    "revision": "7fa04c8ab398c8ba77c9975a3186a2e4",
+    "revision": "f7d7bd786222b3807be9031f14bbc092",
     "url": "/enuygun/index.html"
   }
 ];
