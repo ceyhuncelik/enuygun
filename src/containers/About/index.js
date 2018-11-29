@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchTvShows } from 'thunks/serviceMiddleware'
 import { serviceReducerToJS } from 'selector';
+import { Grid, Row, Col } from 'react-bootstrap';
+import { Markup } from 'interweave';
 // import { convertToJS } from './selectors/serviceSelector';
 import { API_SINGLE_SEARCH } from 'paths';
 class About extends Component {
@@ -10,16 +12,80 @@ class About extends Component {
     this.state = {
       query: this.props.match.params.query || null,
     }
+    this.generateGenres = this.generateGenres.bind(this);
   }
   componentWillMount() {
-    this.props.dispatch(fetchTvShows(this.state.query, { q: this.state.query }, API_SINGLE_SEARCH));
+    this.props.dispatch(fetchTvShows(this.state.query, { q: this.state.query }, API_SINGLE_SEARCH, (res) => {
+      this.setState({
+        name: res.name,
+        summary: res.summary,
+        url: res.url,
+        genres: res.genres,
+        average: res.rating.average,
+        countryCode: res.network.country.code,
+        countryName: res.network.country.name,
+        image: res.image.original,
+      });
+    }));
+  }
+
+  generateGenres(genres = []) {
+    let temp = '';
+    genres.forEach((item, index) => {
+      temp += item;
+      if(index < genres.length -1) { temp += ', '; }
+    });
+    return temp;
   }
 
   render() {
-    console.log(this.props, 'hadi bakalım hayrlısı');
+    const { name, average, countryCode, countryName, image, summary, url, genres } = this.state;
+
     return (
       <div className="about-page-wraper">
-        <button onClick={() => this.props.history.goBack()}> --------------- ana sayfaya dön --------------</button>
+        <Grid>
+          <Row>
+            <Col lg={12}>
+              <label className="header"> </label>
+            </Col>
+          </Row>
+          <Row className="row-equal-height">
+            <Col lg={4} md={4} sm={6} xs={12}>
+              <div className="left-box">
+                <img className="img" alt="" src={image}/>
+              </div>
+            </Col>
+            <Col lg={8} md={8} sm={6} xs={12}>
+              <div className="right-box">
+                <label className="header">{name}</label>
+                <div className="empty1">  </div>
+
+                <div className="rate-country">
+                  <span className="rate">
+                    Rating: {average}
+                  </span>
+                  <span className="country">
+                    Country: {countryName} <img alt={name} height="24" src={'https://www.countryflags.io/'+countryCode+'/flat/64.png'} />
+                  </span>
+                </div>
+                <div className="summary">
+                  <label className="summary-header">Summary</label>
+                  <Markup content={summary} />
+                </div>
+                <div className="genres">
+                  {this.generateGenres(genres)}
+                </div>
+                <div className="link-box-goBack">
+                  <a target="_blank" href={url}> Go to TVmaze.</a>
+                </div>
+                <div className="link-box">
+                  <a role="button" onClick={() => this.props.history.goBack()}> Return Home Page</a>
+                </div>
+
+              </div>
+            </Col>
+          </Row>
+        </Grid>
       </div>
     );
   }

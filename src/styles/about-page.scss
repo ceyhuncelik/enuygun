@@ -1,6 +1,124 @@
 .about-page-wraper {
-  background-color: blue;
   height: 100%;
   width: 100%;
-  
+  .row-equal-height {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display:         flex;
+    flex-wrap: wrap;
+    [class*='col-'] {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  .header {
+    font-size: 22px;
+    color: #fff;
+    margin-top: 30px;
+  }
+  .left-box {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    @include box-shadow();
+    .img {
+      border-radius: 10px;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .right-box {
+    padding: 0 10px;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 100px;
+    .header {
+      color: #fff;
+      font-weight: 600;
+      font-size: 30px;
+      text-transform: uppercase;
+    }
+    .empty1 {
+      width: 100%;
+      height: 40px;
+      content: '';
+    }
+    .rate-country {
+      color: #fff;
+      border-bottom: .2px solid #aaaa;
+      .rate {
+        &:before {
+          content: "\2605";
+          color: #f5b50a;
+          font-size: 22px;
+        }
+      }
+      .country {
+        float: right;
+        right: 0;
+      }
+    }
+    .summary {
+      .summary-header {
+        color: #fff;
+        font-size: 14px;
+      }
+      font-size: 14px;
+      background: rgba(0,0,0,0.6);
+      padding: 25px 10px;
+      margin-top: 20px;
+      border-radius: 5px;
+      color: #fff;
+      @include box-shadow();
+      textarea {
+
+      }
+    }
+    .genres {
+      color: #fff;
+      margin: 20px 0px;
+    }
+    .link-box, .link-box-goBack {
+      position: absolute;
+      right: 70px;
+      background-color: #f5b50a;
+      padding: 8px 15px;
+      width: 210px;
+      height: 38px;
+      text-align: center;
+      -webkit-border-radius: 30px;
+      -moz-border-radius: 30px;
+      border-radius: 30px;
+      cursor: pointer;
+      opacity: 0.5;
+      @include item-transition();
+      a {
+        text-decoration: none;
+        color: white;
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+      &:hover {
+        opacity: 1;
+      }
+    }
+    .link-box-goBack {
+      left: 15px;
+      background-color: transparent;
+      border: 1px solid #dd003f;
+      opacity: 1;
+      &:hover {
+        background-color: #dd003f;
+      }
+    }
+  }
 }
+
+
+// hemen hazır bir taslak cekmemiz gerekiyor
+// acilen
+//yoksa isimiz oldukca zor
+
+// daha bide wideframe var

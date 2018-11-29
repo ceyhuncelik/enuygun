@@ -24,7 +24,7 @@ import {
   tvShowFetchFailure,
 } from 'actions/serviceAction';
 
-export function fetchTvShows(key = 'batmanShowList', filterValue = {}, url = API_SEARCH) {
+export function fetchTvShows(key = 'batmanShowList', filterValue = {}, url = API_SEARCH, callback = () => {}) {
 
   const newUrl = url + setQuery(filterValue);
   return (dispatch) => {
@@ -35,7 +35,10 @@ export function fetchTvShows(key = 'batmanShowList', filterValue = {}, url = API
         else { return response; }
       })
       .then(response => response.json()) // responsu parse ediyor
-      .then((item) => dispatch(tvShowFetchSuccess(key, item)))
+      .then((item) => {
+        callback(item);
+        return dispatch(tvShowFetchSuccess(key, item))
+      })
       .catch((error) => dispatch(tvShowFetchFailure(error)));
   };
 }
